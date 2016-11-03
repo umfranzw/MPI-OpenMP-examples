@@ -1,0 +1,6 @@
+#!/bin/bash
+HOSTFILE=hosts
+NUM_PROCS=$1
+EXEC=hybrid
+
+mpirun -np $NUM_PROCS --hostfile $HOSTFILE --map-by node $EXEC $2
